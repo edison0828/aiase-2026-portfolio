@@ -1,0 +1,14 @@
+System Research: designing computing infrastructure under real-world constraints.
+Design Space: the set of feasible architectural choices and their trade-offs.
+Tail Latency: the high-percentile latency such as P99 or P99.9.
+FTL: Flash Translation Layer inside an SSD.
+Garbage Collection: background cleanup that reclaims invalid data.
+Write Amplification: physical writes divided by logical writes.
+SMR: Shingled Magnetic Recording.
+IMR: Interlaced Magnetic Recording or related dense magnetic layout strategies.
+NVM: Non-Volatile Memory.
+Crash Consistency: preserving correctness after failures or power loss.
+LSM-tree: log-structured merge tree used by many KV stores.
+Compaction: background merge and reorganization work in LSM systems.
+Device-aware: software that explicitly adapts to media or device rules.
+Co-Design: hardware and software designed together rather than independently.

@@ -1,0 +1,21 @@
+{
+  "task_id": "portfolio_merge_intervals",
+  "provenance": "New demonstration fixture authored for portfolio packaging on 2026-10-07; not an original course evaluation task.",
+  "task_description": "Merge overlapping or touching integer intervals; return [] for no intervals.",
+  "constraints": {
+    "entry_function": "merge_intervals",
+    "max_loc": 100,
+    "imports_forbidden": [
+      "os",
+      "sys"
+    ]
+  },
+  "clean_code": "def merge_intervals(intervals):\n    result = []\n    for begin, finish in sorted(intervals):\n        if result and begin <= result[-1][1]:\n            result[-1][1] = max(result[-1][1], finish)\n        else:\n            result.append([begin, finish])\n    return result\n",
+  "buggy_code": "def merge_intervals(intervals):\n    result = []\n    for begin, finish in sorted(intervals):\n        if result and begin < result[-1][1]:\n            result[-1][1] = max(result[-1][1], finish)\n        else:\n            result.append([begin, finish])\n    return result\n",
+  "bugs_in_buggy": [
+    {
+      "line_start": 4,
+      "type": "off_by_one"
+    }
+  ]
+}

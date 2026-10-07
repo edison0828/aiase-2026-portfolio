@@ -1,0 +1,13 @@
+Potential public source categories for expanding this corpus:
+- FAST, ATC, SOSP, and OSDI storage papers.
+- Linux kernel documentation for block layer, zoned storage, and filesystems.
+- NVMe and zoned namespace documentation.
+- Public arXiv or author-posted PDFs about flash-aware systems, NVM-aware data structures, and computational storage.
+- Open-source documentation from RocksDB, WiredTiger, ZenFS, F2FS, bcachefs, and related projects.
+
+Candidate subtopics to expand next:
+- Zoned Namespace SSD host software.
+- Computational storage offload.
+- Persistent memory indexing and consistency.
+- KV store compaction under SSD constraints.
+- Storage observability and tail-latency analysis.

@@ -1,0 +1,21 @@
+{
+  "task_id": "portfolio_binary_search",
+  "provenance": "New demonstration fixture authored for portfolio packaging on 2026-10-07; not an original course evaluation task.",
+  "task_description": "Return any index of target in a sorted array, or -1 when absent.",
+  "constraints": {
+    "entry_function": "binary_search",
+    "max_loc": 100,
+    "imports_forbidden": [
+      "os",
+      "sys"
+    ]
+  },
+  "clean_code": "def binary_search(arr, target):\n    first, stop = 0, len(arr)\n    while first < stop:\n        middle = (first + stop) // 2\n        if arr[middle] == target:\n            return middle\n        if arr[middle] < target:\n            first = middle + 1\n        else:\n            stop = middle\n    return -1\n",
+  "buggy_code": "def binary_search(arr, target):\n    first, last = 0, len(arr) - 1\n    while first < last:\n        middle = (first + last) // 2\n        if arr[middle] == target:\n            return middle\n        if arr[middle] < target:\n            first = middle + 1\n        else:\n            last = middle - 1\n    return -1\n",
+  "bugs_in_buggy": [
+    {
+      "line_start": 3,
+      "type": "off_by_one"
+    }
+  ]
+}

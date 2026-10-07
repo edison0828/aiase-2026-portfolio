@@ -1,0 +1,4 @@
+# Python 3.10+. Minimal offline text/Markdown demo.
+numpy>=1.26,<3
+# Needed only when reading a local .env file; shell environment also works.
+python-dotenv>=1,<2

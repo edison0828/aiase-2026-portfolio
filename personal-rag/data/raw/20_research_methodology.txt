@@ -1,0 +1,9 @@
+Research workflow for this topic:
+
+1. Define a target workload before selecting a storage optimization.
+2. State which metric matters most: throughput, average latency, P99 latency, endurance, or recovery cost.
+3. Identify which layer owns each complexity: application, file system, runtime, device firmware, or media.
+4. Separate foreground request behavior from background work such as garbage collection or compaction.
+5. Evaluate under realistic fill levels and enough runtime to expose steady-state behavior.
+6. Compare not only wins but also regressions under mismatched workloads.
+7. Record open questions for future paper collection, especially zoned storage, NVM consistency, and AI data pipeline integration.

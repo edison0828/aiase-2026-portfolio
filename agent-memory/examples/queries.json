@@ -1,0 +1,6 @@
+[
+  {"query":"microscope sketches", "expected_id":"demo-optics"},
+  {"query":"basil watering", "expected_id":"demo-garden"},
+  {"query":"clarinet samples", "expected_id":"demo-audio"},
+  {"query":"hiking routes", "expected_id":"demo-map"}
+]

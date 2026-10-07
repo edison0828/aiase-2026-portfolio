@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+demo.json
+paperqueue_data.json
+reading-notes.md
+tmp_sdd_v1_demo.json
+tmp_sdd_v2_demo.json
+tmp_export.md

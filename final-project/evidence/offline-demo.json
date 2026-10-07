@@ -1,0 +1,103 @@
+{
+  "scope": "Offline helpers with newly authored portfolio fixtures; no LLM or course hidden tests.",
+  "checks": {
+    "valid_sql_accepted": true,
+    "unknown_column_rejected": true,
+    "clean_samples_pass": true,
+    "clean_has_no_bug_report": true,
+    "clean_has_no_reproducer": true,
+    "buggy_sample_fails": true,
+    "buggy_has_bug_report": true,
+    "buggy_has_reproducer": true
+  },
+  "passed": 8,
+  "total": 8,
+  "results": {
+    "sql_schema_validation": {
+      "valid_query": {
+        "ok": true,
+        "error": ""
+      },
+      "unknown_column": {
+        "ok": false,
+        "error": "SQL did not compile: no such column: missing"
+      }
+    },
+    "clean": {
+      "selftest": {
+        "passed": 6,
+        "failed": 0,
+        "errors": [],
+        "sloc": 11,
+        "loc_violation": false,
+        "import_violations": [],
+        "sample_count": 6
+      },
+      "bug_report": {
+        "task_id": "portfolio_binary_search",
+        "verdict": "clean",
+        "bugs": [],
+        "confidence": 0.85
+      },
+      "reproducer": {
+        "task_id": "portfolio_binary_search",
+        "entry_function": "binary_search",
+        "bug_triggered": false,
+        "reproducer": null,
+        "tried": 6,
+        "strategy": "no_generated_probe_failed",
+        "confidence": 0.55
+      }
+    },
+    "buggy": {
+      "selftest": {
+        "passed": 4,
+        "failed": 2,
+        "errors": [
+          "mismatch on [[5], 5]: got -1, expected 0",
+          "mismatch on [[1, 2, 3, 4, 5], 5]: got -1, expected 4"
+        ],
+        "sloc": 11,
+        "loc_violation": false,
+        "import_violations": [],
+        "sample_count": 6
+      },
+      "bug_report": {
+        "task_id": "portfolio_binary_search",
+        "verdict": "buggy",
+        "bugs": [
+          {
+            "line_start": 3,
+            "line_end": 3,
+            "severity": "high",
+            "type": "off_by_one",
+            "description": "The loop can skip the final candidate when `lo == hi`.",
+            "suggested_fix": "Use inclusive bounds with `while lo <= hi`, or make all bounds exclusive consistently."
+          }
+        ],
+        "confidence": 0.9
+      },
+      "reproducer": {
+        "task_id": "portfolio_binary_search",
+        "entry_function": "binary_search",
+        "bug_triggered": true,
+        "reproducer": {
+          "input": [
+            [
+              5
+            ],
+            5
+          ],
+          "expected": 0,
+          "actual": -1,
+          "error": "",
+          "kind": "mismatch",
+          "label": "single present"
+        },
+        "tried": 3,
+        "strategy": "smallest_expected_output_probe",
+        "confidence": 0.95
+      }
+    }
+  }
+}

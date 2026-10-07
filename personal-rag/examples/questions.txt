@@ -1,0 +1,4 @@
+# Portfolio-added lexical smoke queries; these are not a quality benchmark.
+ambercache evicting persistent copy
+cobaltwrite physical logical boundary
+jadeeval corpus relevance labels

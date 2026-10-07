@@ -1,0 +1,5 @@
+# Optional only; not needed by the offline showcase or its tests.
+openai>=1,<3
+PyMuPDF>=1.24,<2
+sentence-transformers>=2.7,<6
+litellm>=1.40,<2

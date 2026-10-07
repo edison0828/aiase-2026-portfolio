@@ -1,0 +1,32 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Python and editor outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime state and regeneratable outputs
+artifacts/
+data/processed/
+data/paperqueue.json
+*.sqlite
+*.sqlite3
+*.db
+dev_run_results/
+memory.json
+memory_store.json
+.local-memory/
+.pi-memory.json
+demo.json
+reading-notes.md
+node_modules/

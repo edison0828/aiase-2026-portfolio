@@ -1,0 +1,21 @@
+{
+  "task_id": "portfolio_kth_smallest",
+  "provenance": "New demonstration fixture authored for portfolio packaging on 2026-10-07; not an original course evaluation task.",
+  "task_description": "Return the k-th smallest integer, using 1-based k and counting duplicates; return None if k is invalid.",
+  "constraints": {
+    "entry_function": "kth_smallest",
+    "max_loc": 100,
+    "imports_forbidden": [
+      "os",
+      "sys"
+    ]
+  },
+  "clean_code": "def kth_smallest(nums, k):\n    if k < 1 or k > len(nums):\n        return None\n    ordered = sorted(nums)\n    return ordered[k - 1]\n",
+  "buggy_code": "def kth_smallest(nums, k):\n    if k < 1 or k > len(nums):\n        return None\n    ordered = sorted(nums)\n    return ordered[k]\n",
+  "bugs_in_buggy": [
+    {
+      "line_start": 5,
+      "type": "off_by_one"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+[
+  {"id":"demo-optics","summary":"The fictional optics notebook saves microscope sketches as SVG.","tags":["optics","sketches"]},
+  {"id":"demo-garden","summary":"The fictional garden logger records basil watering every Thursday.","tags":["garden","schedule"]},
+  {"id":"demo-audio","summary":"The fictional audio experiment stores clarinet samples at 48 kHz.","tags":["audio","sampling"]},
+  {"id":"demo-archive","summary":"The fictional archive labels backup volumes with amber labels.","tags":["archive","backup"]},
+  {"id":"demo-map","summary":"The fictional map editor exports hiking routes as GeoJSON.","tags":["maps","export"]}
+]
